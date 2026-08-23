@@ -93,7 +93,9 @@ header {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 4 / 1;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  padding: 20px 0;
 }
 
 /* MAIN */
@@ -291,4 +293,3 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
-
