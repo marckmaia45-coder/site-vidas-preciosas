@@ -82,20 +82,32 @@ nav {
   padding: 5px 10px;
 }
 
-/* HEADER */
+/* HEADER - centraliza e mantém proporção da imagem */
 header {
   width: 100%;
   margin-top: 80px;
   overflow: hidden;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  padding: 20px 0;
 }
 
 .header-image {
-  width: 100%;
-  height: auto;
+  width: auto;            /* não forçar largura 100% */
+  max-width: 600px;       /* ajuste a largura máxima conforme precisar */
+  height: auto;           /* mantém proporção original da imagem */
   display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  padding: 20px 0;
+  object-fit: contain;    /* garante que a imagem mantenha aspecto sem cortar */
+  border-radius: 6px;     /* opcional: deixa com cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* opcional: melhora visibilidade */
+}
+
+/* Em telas pequenas, permitir que ocupe mais espaço */
+@media (max-width: 600px) {
+  .header-image {
+    max-width: 90%;
+  }
 }
 
 /* MAIN */
