@@ -6,7 +6,8 @@
   <meta name="description" content="Centro especializado no tratamento masculino da dependência química e alcoolismo com abordagem humanizada.">
   <title>🚑 Vidas Preciosas - Tratamento em dependencia quimica alcoolismo e jogadores compulsivos</title>
   <link rel="stylesheet" href="index.css">
-  <!-- Use caminho relativo explícito e tipo correto para PNG. Apontar para a versão menor (logoo.png) para evitar problemas de carregamento -->
+  <!-- Fallback favicon (mantive apenas se necessário) -->
+  <link rel="icon" href="./logoo.png" type="image/png">
   
 </head>
 <body>
@@ -25,8 +26,11 @@
 
   <!-- Cabeçalho -->
   <header>
-    <!-- Aponta para a imagem menor existente (logoo.png). Adicionei loading="lazy" e dimensões para ajudar no carregamento -->
-    <img src="./logoo.png" alt="Logo Vidas Preciosas" class="header-image" loading="lazy" width="200" height="60">
+    <!-- Serve uma versão menor para telas pequenas via <picture>. Se não houver logoo-mobile.png, o navegador usará logoo.png como fallback. -->
+    <picture>
+      <source media="(max-width: 420px)" srcset="./logoo-mobile.png">
+      <img src="./logoo.png" alt="Logo Vidas Preciosas" class="header-image" loading="lazy" width="200" height="60">
+    </picture>
   </header>
 
   <!-- Conteúdo principal -->
