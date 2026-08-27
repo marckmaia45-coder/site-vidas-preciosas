@@ -344,9 +344,9 @@ html {
   .menu-toggle { display: block !important; }
 
   /* Header: reduzir altura no mobile para evitar overflow */
-  /* ALTERAÇÃO: definir a imagem do cabeçalho para no máximo 50vh em mobile */
-  header { height: auto; min-height: 50vh; padding-top: 56px; }
-  .header-image { width: 100%; height: auto; max-height: 50vh; object-fit: cover; }
+  /* ALTERAÇÃO: definir a imagem do cabeçalho para no máximo 55vh em mobile */
+  header { height: auto; min-height: 55vh; padding-top: 56px; }
+  .header-image { width: 100%; height: auto; max-height: 55vh; object-fit: cover; }
 
   /* Balões e tipografia */
   .balao { padding: 18px; margin-bottom: 18px; border-radius: 14px; }
@@ -373,7 +373,7 @@ html {
   /* Ajustes finos para ~393px (Galaxy A55) */
   @media (min-width: 360px) and (max-width: 398px) {
     :root { font-size: 15.25px; }
-    .header-image { max-height: 50vh; }
+    .header-image { max-height: 55vh; }
     .nav-container { padding: 0 10px; }
   }
 }
