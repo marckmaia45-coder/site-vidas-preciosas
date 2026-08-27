@@ -36,9 +36,9 @@ nav {
   z-index: 10;
   display: flex;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
   border-radius: 10px;
   will-change: transform;
 }
@@ -82,24 +82,25 @@ nav {
   padding: 5px 10px;
 }
 
-/* HEADER - Foto em destaque preenchendo a tela - AUMENTADO */
+/* HEADER - imagem do logo responsiva */
 header {
   width: 100%;
-  height: 120vh;
+  height: 60vh; /* reduzido para evitar grandes espaços vazios */
+  min-height: 220px;
   margin-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  background: #000;
+  padding: 0 20px;
+  background: #000; /* mantém contraste caso o logo seja claro */
 }
 
 /* Ajustes do logo: usar dimensões responsivas por padrão para evitar cortes e garantir visibilidade no mobile */
 .header-image {
-  width: 100%;       /* ocupa a largura do contêiner */
-  height: auto;      /* ajusta a altura proporcionalmente */
-  max-width: 100%;
-  max-height: 100%;
+  width: auto;         /* evita esticar horizontalmente */
+  max-width: 320px;    /* tamanho máximo em desktop */
+  height: auto;        /* ajusta a altura proporcionalmente */
+  max-height: 70vh;    /* garante que não ultrapasse a viewport em mobile */
   object-fit: contain; /* garante que a imagem inteira fique visível */
   display: block;
 }
@@ -107,38 +108,35 @@ header {
 /* Em telas médias (tablet) */
 @media (max-width: 900px) {
   header {
-    height: 100vh;
+    height: 50vh;
   }
-  
   .header-image {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
+    max-width: 280px;
+    max-height: 60vh;
   }
 }
 
-/* Em telas pequenas (celular) - mantém 100vh */
+/* Em telas pequenas (celular) */
 @media (max-width: 600px) {
   header {
-    height: 100vh;
+    height: 45vh;
+    min-height: 180px;
+    padding-top: 56px; /* espaço para o nav fixo */
   }
-  
   .header-image {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
+    max-width: 220px;
+    max-height: 55vh;
   }
 }
 
 @media (max-width: 480px) {
   header {
-    height: 80vh;
+    height: 38vh;
+    min-height: 160px;
   }
-  
   .header-image {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
+    max-width: 200px;
+    max-height: 50vh;
   }
 }
 
@@ -350,8 +348,8 @@ html {
   .menu-toggle { display: block !important; }
 
   /* Header: reduzir altura no mobile para evitar overflow */
-  header { height: 100vh; min-height: 420px; padding-top: 56px; }
-  .header-image { width: 100%; height: auto; max-height: 60vh; object-fit: contain; }
+  header { height: 55vh; min-height: 380px; padding-top: 56px; }
+  .header-image { max-width: 220px; max-height: 60vh; object-fit: contain; }
 
   /* Balões e tipografia */
   .balao { padding: 18px; margin-bottom: 18px; border-radius: 14px; }
