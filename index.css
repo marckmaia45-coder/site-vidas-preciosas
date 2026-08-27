@@ -331,3 +331,48 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Mobile-only: ajustes focados em Galaxy A55 e telas ~360–412px */
+@media (max-width: 420px) {
+  /* Ajuste geral de espaçamento e fonte */
+  :root { font-size: 15.5px; }
+  main { padding: 16px; margin: 12px auto; }
+
+  /* Navegação: mostrar botão, menu em overlay */
+  .menu { display: none !important; position: absolute; top: 64px; right: 12px; width: calc(100% - 36px); max-width: 320px; box-shadow: 0 6px 18px rgba(0,0,0,0.15); border-radius: 10px; }
+  .menu.active { display: flex !important; flex-direction: column; }
+  .menu-toggle { display: block !important; }
+
+  /* Header: reduzir altura no mobile para evitar overflow */
+  header { height: 100vh; min-height: 420px; padding-top: 56px; }
+  .header-image { width: 100%; height: 100%; max-height: 60vh; object-fit: cover; }
+
+  /* Balões e tipografia */
+  .balao { padding: 18px; margin-bottom: 18px; border-radius: 14px; }
+  .balao h2 { font-size: 1.4rem; }
+  .balao p, .balao li { font-size: 0.95rem; line-height: 1.45; }
+
+  /* Procedimentos: transformar grid em coluna única/duas colunas conforme espaço */
+  .procedimentos-container { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Imagens: 1 coluna, imagens maiores e com altura responsiva */
+  .imagens-container { grid-template-columns: 1fr; gap: 12px; }
+  .imagem { height: auto; aspect-ratio: auto; border-radius: 10px; }
+
+  /* Botões e alvos táteis */
+  .btn-whatsapp, .menu-item, button, .menu-toggle { padding: 12px 16px; min-height: 44px; border-radius: 10px; }
+
+  /* Back-to-top menor e mais discreto */
+  .back-to-top { bottom: 14px; right: 14px; width: 36px; height: 36px; font-size: 1.1rem; }
+
+  /* Evitar overflow horizontal em qualquer elemento */
+  html, body { overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+  img, picture, video, iframe { max-width: 100%; height: auto; display: block; }
+
+  /* Ajustes finos para ~393px (Galaxy A55) */
+  @media (min-width: 360px) and (max-width: 398px) {
+    :root { font-size: 15.25px; }
+    .header-image { max-height: 58vh; }
+    .nav-container { padding: 0 10px; }
+  }
+}
