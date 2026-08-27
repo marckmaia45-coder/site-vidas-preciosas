@@ -94,10 +94,13 @@ header {
   background: #000;
 }
 
+/* Ajustes do logo: usar dimensões responsivas por padrão para evitar cortes e garantir visibilidade no mobile */
 .header-image {
-  width: 120%;
-  height: 120%;
-  object-fit: cover;
+  width: 100%;       /* ocupa a largura do contêiner */
+  height: auto;      /* ajusta a altura proporcionalmente */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* garante que a imagem inteira fique visível */
   display: block;
 }
 
@@ -108,8 +111,9 @@ header {
   }
   
   .header-image {
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
   }
 }
 
@@ -120,8 +124,9 @@ header {
   }
   
   .header-image {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
   }
 }
 
@@ -131,8 +136,9 @@ header {
   }
   
   .header-image {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
   }
 }
 
@@ -345,7 +351,7 @@ html {
 
   /* Header: reduzir altura no mobile para evitar overflow */
   header { height: 100vh; min-height: 420px; padding-top: 56px; }
-  .header-image { width: 100%; height: 100%; max-height: 60vh; object-fit: cover; }
+  .header-image { width: 100%; height: auto; max-height: 60vh; object-fit: contain; }
 
   /* Balões e tipografia */
   .balao { padding: 18px; margin-bottom: 18px; border-radius: 14px; }
