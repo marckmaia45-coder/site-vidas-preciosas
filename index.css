@@ -378,7 +378,7 @@ html {
   /* Ajustes finos para ~393px (Galaxy A55) */
   @media (min-width: 360px) and (max-width: 398px) {
     :root { font-size: 15.25px; }
-    .header-image { max-height: 58vh; }
+    .header-image { max-height: 32vh; }
     .nav-container { padding: 0 10px; }
   }
 }
